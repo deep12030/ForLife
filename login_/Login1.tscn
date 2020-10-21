@@ -1,0 +1,162 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://background.jpg" type="Texture" id=2]
+[ext_resource path="res://Button_normal.png" type="Texture" id=3]
+[ext_resource path="res://dynamic.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+outline_size = 1
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 4 )
+
+[node name="Login1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.640076
+margin_bottom = 0.640076
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -262.5
+margin_right = 200.0
+margin_bottom = 262.5
+rect_min_size = Vector2( 400, 525 )
+texture = ExtResource( 2 )
+patch_margin_top = 28
+patch_margin_bottom = 28
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect"]
+anchor_top = 0.000735183
+anchor_right = 1.0
+anchor_bottom = 1.00074
+margin_left = 33.0798
+margin_top = 61.026
+margin_right = -36.9202
+margin_bottom = -43.974
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="NinePatchRect/VBoxContainer"]
+margin_right = 330.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 1 )
+text = "Login Screen"
+align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
+margin_top = 39.0
+margin_right = 330.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 45 )
+
+[node name="UsernameTitle" type="Label" parent="NinePatchRect/VBoxContainer"]
+margin_top = 88.0
+margin_right = 330.0
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 3 )
+text = "Username"
+
+[node name="Username" type="LineEdit" parent="NinePatchRect/VBoxContainer"]
+light_mask = 9
+margin_top = 109.0
+margin_right = 330.0
+margin_bottom = 139.0
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PasswordTitle" type="Label" parent="NinePatchRect/VBoxContainer"]
+margin_top = 143.0
+margin_right = 330.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 7 )
+text = "Password"
+
+[node name="Password" type="LineEdit" parent="NinePatchRect/VBoxContainer"]
+margin_top = 164.0
+margin_right = 330.0
+margin_bottom = 188.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
+margin_top = 192.0
+margin_right = 330.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 40 )
+
+[node name="LoginButton" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
+margin_top = 236.0
+margin_right = 330.0
+margin_bottom = 236.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
+texture_disabled = ExtResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/LoginButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 220, 55 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+text = "Login"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegisterButton" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
+margin_top = 240.0
+margin_right = 330.0
+margin_bottom = 240.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
+texture_disabled = ExtResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/RegisterButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.771942
+margin_top = 57.5091
+margin_right = -0.771942
+margin_bottom = 112.509
+rect_min_size = Vector2( 220, 55 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+text = "Register"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
